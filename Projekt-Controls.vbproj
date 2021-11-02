@@ -73,10 +73,13 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core\Controls\ProjektButton.vb">
+    <Compile Include="Core\Controls\ProjektButton-Control.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektToggleButton.vb">
+    <Compile Include="Core\Controls\ProjektDatePicker-Control.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Controls\ProjektToggleButton-Control.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -101,10 +104,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Core\Components\ProjektDragComponent.vb">
+    <Compile Include="Core\Components\ProjektDrag-Component.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektSeparator.vb">
+    <Compile Include="Core\Controls\ProjektSeparator-Control.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
@@ -118,8 +121,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Core\Controls\ProjektButton.resx">
-      <DependentUpon>ProjektButton.vb</DependentUpon>
+    <EmbeddedResource Include="Core\Controls\ProjektButton-Control.resx">
+      <DependentUpon>ProjektButton-Control.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -133,6 +136,12 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_Dark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendar_Light.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
