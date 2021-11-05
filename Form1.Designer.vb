@@ -205,6 +205,7 @@ Partial Class MainForm
         'ProjektRoundedForm1
         '
         Me.ProjektRoundedForm1.BorderSize = 20
+        Me.ProjektRoundedForm1.SelectedForm = Nothing
         '
         'MainForm
         '
