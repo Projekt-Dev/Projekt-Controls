@@ -25,6 +25,8 @@ Partial Class MainForm
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.ProjektTextBox1 = New Projekt_Controls.ProjektTextBox()
+        Me.ProjektSeparator5 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektSeparator4 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektSeparator3 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektSeparator2 = New Projekt_Controls.ProjektSeparator()
@@ -34,8 +36,8 @@ Partial Class MainForm
         Me.ProjektButton1 = New Projekt_Controls.ProjektButton()
         Me.ProjektRadioButton2 = New Projekt_Controls.ProjektRadioButton()
         Me.ProjektRadioButton1 = New Projekt_Controls.ProjektRadioButton()
-        Me.ProjektDragComponent1 = New Projekt_Controls.ProjektDragComponent()
-        Me.ProjektRoundedForm1 = New Projekt_Controls.ProjektRoundedForm()
+        Me.DragMain = New Projekt_Controls.ProjektDrag_Component()
+        Me.ProjektRoundedForm_Component1 = New Projekt_Controls.ProjektRoundedForm_Component()
         Me.pnlHeader.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -47,7 +49,7 @@ Partial Class MainForm
         Me.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top
         Me.pnlHeader.Location = New System.Drawing.Point(0, 0)
         Me.pnlHeader.Name = "pnlHeader"
-        Me.pnlHeader.Size = New System.Drawing.Size(1290, 46)
+        Me.pnlHeader.Size = New System.Drawing.Size(1280, 46)
         Me.pnlHeader.TabIndex = 0
         '
         'btnExit
@@ -59,7 +61,7 @@ Partial Class MainForm
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Montserrat SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.White
-        Me.btnExit.Location = New System.Drawing.Point(1215, 0)
+        Me.btnExit.Location = New System.Drawing.Point(1205, 0)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 46)
         Me.btnExit.TabIndex = 1
@@ -77,6 +79,35 @@ Partial Class MainForm
         Me.lblTitle.Size = New System.Drawing.Size(362, 29)
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "PROJEKT CUSTOM CONTROLS"
+        '
+        'ProjektTextBox1
+        '
+        Me.ProjektTextBox1._Text = ""
+        Me.ProjektTextBox1.BackColor = System.Drawing.SystemColors.Window
+        Me.ProjektTextBox1.BorderColor = System.Drawing.Color.Crimson
+        Me.ProjektTextBox1.BorderFocusColor = System.Drawing.Color.DarkRed
+        Me.ProjektTextBox1.BorderSize = 2
+        Me.ProjektTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProjektTextBox1.ForeColor = System.Drawing.Color.DimGray
+        Me.ProjektTextBox1.Location = New System.Drawing.Point(12, 366)
+        Me.ProjektTextBox1.MultiLine = False
+        Me.ProjektTextBox1.Name = "ProjektTextBox1"
+        Me.ProjektTextBox1.Padding = New System.Windows.Forms.Padding(7)
+        Me.ProjektTextBox1.PasswordChar = False
+        Me.ProjektTextBox1.Size = New System.Drawing.Size(250, 31)
+        Me.ProjektTextBox1.TabIndex = 12
+        Me.ProjektTextBox1.UnderlineStyle = False
+        '
+        'ProjektSeparator5
+        '
+        Me.ProjektSeparator5.ForeColor = System.Drawing.Color.Crimson
+        Me.ProjektSeparator5.isVertical = False
+        Me.ProjektSeparator5.Location = New System.Drawing.Point(12, 337)
+        Me.ProjektSeparator5.Name = "ProjektSeparator5"
+        Me.ProjektSeparator5.Size = New System.Drawing.Size(200, 23)
+        Me.ProjektSeparator5.TabIndex = 11
+        Me.ProjektSeparator5.Text = "ProjektSeparator5"
+        Me.ProjektSeparator5.Thickness = 1
         '
         'ProjektSeparator4
         '
@@ -157,7 +188,7 @@ Partial Class MainForm
         Me.ProjektButton1.BackColor = System.Drawing.Color.Crimson
         Me.ProjektButton1.BackgroundColor = System.Drawing.Color.Crimson
         Me.ProjektButton1.BorderColor = System.Drawing.Color.LightSeaGreen
-        Me.ProjektButton1.BorderRadius = 40
+        Me.ProjektButton1.BorderRadius = 30
         Me.ProjektButton1.BorderSize = 0
         Me.ProjektButton1.FlatAppearance.BorderSize = 0
         Me.ProjektButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
@@ -198,20 +229,23 @@ Partial Class MainForm
         Me.ProjektRadioButton1.UncheckedColor = System.Drawing.Color.Gray
         Me.ProjektRadioButton1.UseVisualStyleBackColor = True
         '
-        'ProjektDragComponent1
+        'DragMain
         '
-        Me.ProjektDragComponent1.SelectedControl = Me.pnlHeader
+        Me.DragMain.SelectedControl = Me.pnlHeader
         '
-        'ProjektRoundedForm1
+        'ProjektRoundedForm_Component1
         '
-        Me.ProjektRoundedForm1.BorderSize = 20
-        Me.ProjektRoundedForm1.SelectedForm = Nothing
+        Me.ProjektRoundedForm_Component1.BorderSize = 20
+        Me.ProjektRoundedForm_Component1.SelectedForm = Nothing
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1290, 655)
+        Me.BackColor = System.Drawing.SystemColors.Window
+        Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.ProjektTextBox1)
+        Me.Controls.Add(Me.ProjektSeparator5)
         Me.Controls.Add(Me.ProjektSeparator4)
         Me.Controls.Add(Me.ProjektSeparator3)
         Me.Controls.Add(Me.ProjektSeparator2)
@@ -223,6 +257,8 @@ Partial Class MainForm
         Me.Controls.Add(Me.ProjektRadioButton1)
         Me.Controls.Add(Me.pnlHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.MaximizeBox = False
+        Me.MinimizeBox = False
         Me.Name = "MainForm"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form1"
@@ -234,7 +270,6 @@ Partial Class MainForm
     End Sub
 
     Friend WithEvents pnlHeader As Panel
-    Friend WithEvents ProjektDragComponent1 As ProjektDragComponent
     Friend WithEvents lblTitle As Label
     Friend WithEvents btnExit As Button
     Friend WithEvents ProjektRadioButton1 As ProjektRadioButton
@@ -246,5 +281,8 @@ Partial Class MainForm
     Friend WithEvents ProjektSeparator2 As ProjektSeparator
     Friend WithEvents ProjektSeparator3 As ProjektSeparator
     Friend WithEvents ProjektSeparator4 As ProjektSeparator
-    Friend WithEvents ProjektRoundedForm1 As ProjektRoundedForm
+    Friend WithEvents DragMain As ProjektDrag_Component
+    Friend WithEvents ProjektSeparator5 As ProjektSeparator
+    Friend WithEvents ProjektTextBox1 As ProjektTextBox
+    Friend WithEvents ProjektRoundedForm_Component1 As ProjektRoundedForm_Component
 End Class

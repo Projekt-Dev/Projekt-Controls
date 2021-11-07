@@ -1,7 +1,7 @@
 ﻿Imports System.ComponentModel
 Imports System.Runtime.InteropServices
 
-Public Class ProjektDragComponent
+Public Class ProjektDrag_Component
     Inherits Component
 
     Private handleControl As Control
@@ -26,8 +26,8 @@ Public Class ProjektDragComponent
     Private Sub Mouse_Down(sender As Object, e As MouseEventArgs)
         Dim flag As Boolean = e.Button = MouseButtons.Left
         If flag Then
-            ProjektDragComponent.ReleaseCapture()
-            ProjektDragComponent.SendMessage(Me.SelectedControl.FindForm().Handle, 161, 2, 0)
+            ProjektDrag_Component.ReleaseCapture()
+            ProjektDrag_Component.SendMessage(Me.SelectedControl.FindForm().Handle, 161, 2, 0)
         End If
     End Sub
 

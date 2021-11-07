@@ -85,6 +85,12 @@
     <Compile Include="Core\Controls\ProjektRadioButton.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Core\Controls\ProjektTextBox.Designer.vb">
+      <DependentUpon>ProjektTextBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Core\Controls\ProjektTextBox.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Core\Controls\ProjektToggleButton-Control.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Core\Controls\ProjektTextBox.resx">
+      <DependentUpon>ProjektTextBox.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
