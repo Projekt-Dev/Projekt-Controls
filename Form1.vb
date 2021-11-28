@@ -9,6 +9,11 @@
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
-        ProjektRoundedForm_Component1.SelectedForm = Me
+        MainRound.SelectedForm = Me
     End Sub
+
+    Private Sub ProjektButton1_Click(sender As Object, e As EventArgs) Handles ProjektButton1.Click
+        MessageBox.Show(ProjektTextBox1._Text)
+    End Sub
+
 End Class

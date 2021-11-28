@@ -21,7 +21,6 @@ Public Class ProjektButton
             Me.Invalidate()
         End Set
     End Property
-
     <Category("Projekt")>
     Public Property BorderRadius As Integer
         Get
@@ -36,7 +35,6 @@ Public Class ProjektButton
             Me.Invalidate()
         End Set
     End Property
-
     <Category("Projekt")>
     Public Property BorderColor As Color
         Get

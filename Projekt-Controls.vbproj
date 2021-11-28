@@ -79,16 +79,19 @@
     <Compile Include="Core\Controls\ProjektButton-Control.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Core\Controls\ProjektComboBox-Control.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Core\Controls\ProjektDatePicker-Control.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Controls\ProjektRadioButton.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektTextBox.Designer.vb">
-      <DependentUpon>ProjektTextBox.vb</DependentUpon>
+    <Compile Include="Core\Controls\ProjektTextBox-Controls.Designer.vb">
+      <DependentUpon>ProjektTextBox-Controls.vb</DependentUpon>
     </Compile>
-    <Compile Include="Core\Controls\ProjektTextBox.vb">
+    <Compile Include="Core\Controls\ProjektTextBox-Controls.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Core\Controls\ProjektToggleButton-Control.vb">
@@ -125,8 +128,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Core\Controls\ProjektTextBox.resx">
-      <DependentUpon>ProjektTextBox.vb</DependentUpon>
+    <EmbeddedResource Include="Core\Controls\ProjektTextBox-Controls.resx">
+      <DependentUpon>ProjektTextBox-Controls.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>

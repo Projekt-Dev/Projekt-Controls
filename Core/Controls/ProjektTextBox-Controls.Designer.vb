@@ -29,9 +29,9 @@ Partial Class ProjektTextBox
         '
         Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TextBox1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TextBox1.Location = New System.Drawing.Point(7, 7)
+        Me.TextBox1.Location = New System.Drawing.Point(10, 7)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(236, 15)
+        Me.TextBox1.Size = New System.Drawing.Size(230, 15)
         Me.TextBox1.TabIndex = 0
         '
         'ProjektTextBox
@@ -42,7 +42,7 @@ Partial Class ProjektTextBox
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ForeColor = System.Drawing.Color.DimGray
         Me.Name = "ProjektTextBox"
-        Me.Padding = New System.Windows.Forms.Padding(7)
+        Me.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
         Me.Size = New System.Drawing.Size(250, 30)
         Me.ResumeLayout(False)
         Me.PerformLayout()

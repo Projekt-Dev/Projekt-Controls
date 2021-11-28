@@ -25,6 +25,9 @@ Partial Class MainForm
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.ProjektSeparator6 = New Projekt_Controls.ProjektSeparator()
+        Me.ProjektTextBox3 = New Projekt_Controls.ProjektTextBox()
+        Me.ProjektTextBox2 = New Projekt_Controls.ProjektTextBox()
         Me.ProjektTextBox1 = New Projekt_Controls.ProjektTextBox()
         Me.ProjektSeparator5 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektSeparator4 = New Projekt_Controls.ProjektSeparator()
@@ -37,7 +40,7 @@ Partial Class MainForm
         Me.ProjektRadioButton2 = New Projekt_Controls.ProjektRadioButton()
         Me.ProjektRadioButton1 = New Projekt_Controls.ProjektRadioButton()
         Me.DragMain = New Projekt_Controls.ProjektDrag_Component()
-        Me.ProjektRoundedForm_Component1 = New Projekt_Controls.ProjektRoundedForm_Component()
+        Me.MainRound = New Projekt_Controls.ProjektRoundedForm_Component()
         Me.pnlHeader.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -80,21 +83,83 @@ Partial Class MainForm
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "PROJEKT CUSTOM CONTROLS"
         '
+        'ProjektSeparator6
+        '
+        Me.ProjektSeparator6.ForeColor = System.Drawing.Color.Crimson
+        Me.ProjektSeparator6.isVertical = False
+        Me.ProjektSeparator6.Location = New System.Drawing.Point(12, 557)
+        Me.ProjektSeparator6.Name = "ProjektSeparator6"
+        Me.ProjektSeparator6.Size = New System.Drawing.Size(320, 23)
+        Me.ProjektSeparator6.TabIndex = 15
+        Me.ProjektSeparator6.Text = "ProjektSeparator6"
+        Me.ProjektSeparator6.Thickness = 1
+        '
+        'ProjektTextBox3
+        '
+        Me.ProjektTextBox3._Text = ""
+        Me.ProjektTextBox3.BackColor = System.Drawing.SystemColors.Window
+        Me.ProjektTextBox3.BorderColor = System.Drawing.Color.Crimson
+        Me.ProjektTextBox3.BorderFocusColor = System.Drawing.Color.DarkRed
+        Me.ProjektTextBox3.BorderRadius = 0
+        Me.ProjektTextBox3.BorderSize = 3
+        Me.ProjektTextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProjektTextBox3.ForeColor = System.Drawing.Color.DimGray
+        Me.ProjektTextBox3.IsPasswordChar = False
+        Me.ProjektTextBox3.IsPlaceHolder = True
+        Me.ProjektTextBox3.Location = New System.Drawing.Point(12, 440)
+        Me.ProjektTextBox3.MultiLine = True
+        Me.ProjektTextBox3.Name = "ProjektTextBox3"
+        Me.ProjektTextBox3.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
+        Me.ProjektTextBox3.PasswordChar = False
+        Me.ProjektTextBox3.PlaceHolderColor = System.Drawing.Color.DarkSlateGray
+        Me.ProjektTextBox3.PlaceHolderText = "PROJEKT"
+        Me.ProjektTextBox3.Size = New System.Drawing.Size(320, 111)
+        Me.ProjektTextBox3.TabIndex = 14
+        Me.ProjektTextBox3.UnderlineStyle = False
+        '
+        'ProjektTextBox2
+        '
+        Me.ProjektTextBox2._Text = ""
+        Me.ProjektTextBox2.BackColor = System.Drawing.SystemColors.Window
+        Me.ProjektTextBox2.BorderColor = System.Drawing.Color.Crimson
+        Me.ProjektTextBox2.BorderFocusColor = System.Drawing.Color.DarkRed
+        Me.ProjektTextBox2.BorderRadius = 0
+        Me.ProjektTextBox2.BorderSize = 3
+        Me.ProjektTextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ProjektTextBox2.ForeColor = System.Drawing.Color.DimGray
+        Me.ProjektTextBox2.IsPasswordChar = False
+        Me.ProjektTextBox2.IsPlaceHolder = True
+        Me.ProjektTextBox2.Location = New System.Drawing.Point(12, 403)
+        Me.ProjektTextBox2.MultiLine = False
+        Me.ProjektTextBox2.Name = "ProjektTextBox2"
+        Me.ProjektTextBox2.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
+        Me.ProjektTextBox2.PasswordChar = False
+        Me.ProjektTextBox2.PlaceHolderColor = System.Drawing.Color.DarkSlateGray
+        Me.ProjektTextBox2.PlaceHolderText = "PROJEKT"
+        Me.ProjektTextBox2.Size = New System.Drawing.Size(320, 31)
+        Me.ProjektTextBox2.TabIndex = 13
+        Me.ProjektTextBox2.UnderlineStyle = True
+        '
         'ProjektTextBox1
         '
         Me.ProjektTextBox1._Text = ""
         Me.ProjektTextBox1.BackColor = System.Drawing.SystemColors.Window
         Me.ProjektTextBox1.BorderColor = System.Drawing.Color.Crimson
         Me.ProjektTextBox1.BorderFocusColor = System.Drawing.Color.DarkRed
-        Me.ProjektTextBox1.BorderSize = 2
+        Me.ProjektTextBox1.BorderRadius = 10
+        Me.ProjektTextBox1.BorderSize = 1
         Me.ProjektTextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.5!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ProjektTextBox1.ForeColor = System.Drawing.Color.DimGray
+        Me.ProjektTextBox1.IsPasswordChar = False
+        Me.ProjektTextBox1.IsPlaceHolder = True
         Me.ProjektTextBox1.Location = New System.Drawing.Point(12, 366)
         Me.ProjektTextBox1.MultiLine = False
         Me.ProjektTextBox1.Name = "ProjektTextBox1"
-        Me.ProjektTextBox1.Padding = New System.Windows.Forms.Padding(7)
+        Me.ProjektTextBox1.Padding = New System.Windows.Forms.Padding(10, 7, 10, 7)
         Me.ProjektTextBox1.PasswordChar = False
-        Me.ProjektTextBox1.Size = New System.Drawing.Size(250, 31)
+        Me.ProjektTextBox1.PlaceHolderColor = System.Drawing.Color.DarkSlateGray
+        Me.ProjektTextBox1.PlaceHolderText = "PROJEKT"
+        Me.ProjektTextBox1.Size = New System.Drawing.Size(320, 31)
         Me.ProjektTextBox1.TabIndex = 12
         Me.ProjektTextBox1.UnderlineStyle = False
         '
@@ -104,7 +169,7 @@ Partial Class MainForm
         Me.ProjektSeparator5.isVertical = False
         Me.ProjektSeparator5.Location = New System.Drawing.Point(12, 337)
         Me.ProjektSeparator5.Name = "ProjektSeparator5"
-        Me.ProjektSeparator5.Size = New System.Drawing.Size(200, 23)
+        Me.ProjektSeparator5.Size = New System.Drawing.Size(320, 23)
         Me.ProjektSeparator5.TabIndex = 11
         Me.ProjektSeparator5.Text = "ProjektSeparator5"
         Me.ProjektSeparator5.Thickness = 1
@@ -115,7 +180,7 @@ Partial Class MainForm
         Me.ProjektSeparator4.isVertical = False
         Me.ProjektSeparator4.Location = New System.Drawing.Point(12, 280)
         Me.ProjektSeparator4.Name = "ProjektSeparator4"
-        Me.ProjektSeparator4.Size = New System.Drawing.Size(200, 23)
+        Me.ProjektSeparator4.Size = New System.Drawing.Size(320, 23)
         Me.ProjektSeparator4.TabIndex = 9
         Me.ProjektSeparator4.Text = "ProjektSeparator4"
         Me.ProjektSeparator4.Thickness = 1
@@ -126,7 +191,7 @@ Partial Class MainForm
         Me.ProjektSeparator3.isVertical = False
         Me.ProjektSeparator3.Location = New System.Drawing.Point(12, 205)
         Me.ProjektSeparator3.Name = "ProjektSeparator3"
-        Me.ProjektSeparator3.Size = New System.Drawing.Size(200, 23)
+        Me.ProjektSeparator3.Size = New System.Drawing.Size(320, 23)
         Me.ProjektSeparator3.TabIndex = 8
         Me.ProjektSeparator3.Text = "ProjektSeparator3"
         Me.ProjektSeparator3.Thickness = 1
@@ -137,7 +202,7 @@ Partial Class MainForm
         Me.ProjektSeparator2.isVertical = False
         Me.ProjektSeparator2.Location = New System.Drawing.Point(12, 135)
         Me.ProjektSeparator2.Name = "ProjektSeparator2"
-        Me.ProjektSeparator2.Size = New System.Drawing.Size(200, 23)
+        Me.ProjektSeparator2.Size = New System.Drawing.Size(320, 23)
         Me.ProjektSeparator2.TabIndex = 7
         Me.ProjektSeparator2.Text = "ProjektSeparator2"
         Me.ProjektSeparator2.Thickness = 1
@@ -148,7 +213,7 @@ Partial Class MainForm
         Me.ProjektSeparator1.isVertical = False
         Me.ProjektSeparator1.Location = New System.Drawing.Point(12, 79)
         Me.ProjektSeparator1.Name = "ProjektSeparator1"
-        Me.ProjektSeparator1.Size = New System.Drawing.Size(200, 23)
+        Me.ProjektSeparator1.Size = New System.Drawing.Size(320, 23)
         Me.ProjektSeparator1.TabIndex = 6
         Me.ProjektSeparator1.Text = "ProjektSeparator1"
         Me.ProjektSeparator1.Thickness = 1
@@ -233,10 +298,10 @@ Partial Class MainForm
         '
         Me.DragMain.SelectedControl = Me.pnlHeader
         '
-        'ProjektRoundedForm_Component1
+        'MainRound
         '
-        Me.ProjektRoundedForm_Component1.BorderSize = 20
-        Me.ProjektRoundedForm_Component1.SelectedForm = Nothing
+        Me.MainRound.BorderSize = 20
+        Me.MainRound.SelectedForm = Nothing
         '
         'MainForm
         '
@@ -244,6 +309,9 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.ProjektSeparator6)
+        Me.Controls.Add(Me.ProjektTextBox3)
+        Me.Controls.Add(Me.ProjektTextBox2)
         Me.Controls.Add(Me.ProjektTextBox1)
         Me.Controls.Add(Me.ProjektSeparator5)
         Me.Controls.Add(Me.ProjektSeparator4)
@@ -283,6 +351,9 @@ Partial Class MainForm
     Friend WithEvents ProjektSeparator4 As ProjektSeparator
     Friend WithEvents DragMain As ProjektDrag_Component
     Friend WithEvents ProjektSeparator5 As ProjektSeparator
+    Friend WithEvents MainRound As ProjektRoundedForm_Component
     Friend WithEvents ProjektTextBox1 As ProjektTextBox
-    Friend WithEvents ProjektRoundedForm_Component1 As ProjektRoundedForm_Component
+    Friend WithEvents ProjektTextBox2 As ProjektTextBox
+    Friend WithEvents ProjektTextBox3 As ProjektTextBox
+    Friend WithEvents ProjektSeparator6 As ProjektSeparator
 End Class
