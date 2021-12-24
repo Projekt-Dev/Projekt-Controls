@@ -41,6 +41,7 @@ Partial Class MainForm
         Me.ProjektRadioButton1 = New Projekt_Controls.ProjektRadioButton()
         Me.DragMain = New Projekt_Controls.ProjektDrag_Component()
         Me.MainRound = New Projekt_Controls.ProjektRoundedForm_Component()
+        Me.ProjektComboBox1 = New Projekt_Controls.ProjektComboBox()
         Me.pnlHeader.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -303,12 +304,32 @@ Partial Class MainForm
         Me.MainRound.BorderSize = 20
         Me.MainRound.SelectedForm = Nothing
         '
+        'ProjektComboBox1
+        '
+        Me.ProjektComboBox1._Text = ""
+        Me.ProjektComboBox1.BackColor = System.Drawing.Color.Crimson
+        Me.ProjektComboBox1.BorderColor = System.Drawing.Color.White
+        Me.ProjektComboBox1.BorderSize = 1
+        Me.ProjektComboBox1.DataSource = Nothing
+        Me.ProjektComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.ProjektComboBox1.ForeColor = System.Drawing.Color.DimGray
+        Me.ProjektComboBox1.IconColor = System.Drawing.Color.White
+        Me.ProjektComboBox1.ListBackColor = System.Drawing.Color.Crimson
+        Me.ProjektComboBox1.ListTextColor = System.Drawing.Color.White
+        Me.ProjektComboBox1.Location = New System.Drawing.Point(12, 586)
+        Me.ProjektComboBox1.MinimumSize = New System.Drawing.Size(200, 30)
+        Me.ProjektComboBox1.Name = "ProjektComboBox1"
+        Me.ProjektComboBox1.Padding = New System.Windows.Forms.Padding(1)
+        Me.ProjektComboBox1.Size = New System.Drawing.Size(200, 30)
+        Me.ProjektComboBox1.TabIndex = 16
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.ProjektComboBox1)
         Me.Controls.Add(Me.ProjektSeparator6)
         Me.Controls.Add(Me.ProjektTextBox3)
         Me.Controls.Add(Me.ProjektTextBox2)
@@ -356,4 +377,5 @@ Partial Class MainForm
     Friend WithEvents ProjektTextBox2 As ProjektTextBox
     Friend WithEvents ProjektTextBox3 As ProjektTextBox
     Friend WithEvents ProjektSeparator6 As ProjektSeparator
+    Friend WithEvents ProjektComboBox1 As ProjektComboBox
 End Class

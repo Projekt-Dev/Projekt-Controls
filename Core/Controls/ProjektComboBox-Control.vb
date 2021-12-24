@@ -1,5 +1,4 @@
-﻿Imports System.Windows.Forms
-Imports System.Drawing
+﻿Imports System.Drawing.Design
 Imports System.Drawing.Drawing2D
 Imports System.ComponentModel
 
@@ -10,15 +9,15 @@ Public Class ProjektComboBox
     'Fields
     Private _backColor As Color = Color.Crimson
     Private _iconColor As Color = Color.White
-    Private _listBackColor As Color = Color.Black
+    Private _listBackColor As Color = Color.Crimson
     Private _listTextColor As Color = Color.White
     Private _borderColor As Color = Color.White
     Private _borderSize As Integer = 1
 
     'Items
-    Private cmbList As ComboBox
-    Private lblText As Label
-    Private btnIcon As Button
+    Private ReadOnly cmbList As ComboBox
+    Private ReadOnly lblText As Label
+    Private ReadOnly btnIcon As Button
 
 #Region "Properties"
     <Category("Projekt")>
@@ -127,7 +126,73 @@ Public Class ProjektComboBox
 #End Region
 
     'Data
-
+    <Category("Projekt - Data")>
+    <DesignerSerializationVisibility(DesignerSerializationVisibility.Content)> <Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", GetType(UITypeEditor))> <Localizable(True)> <MergableProperty(False)>
+    Public ReadOnly Property Items As ComboBox.ObjectCollection
+        Get
+            Return cmbList.Items
+        End Get
+    End Property
+    <Category("Projekt - Data")>
+    <AttributeProvider(GetType(IListSource))> <RefreshProperties(RefreshProperties.Repaint)>
+    Public Property DataSource As Object
+        Get
+            Return cmbList.DataSource
+        End Get
+        Set(value As Object)
+            cmbList.DataSource = value
+        End Set
+    End Property
+    <Category("Projekt - Data")>
+    <Browsable(True)> <DefaultValue(AutoCompleteSource.None)> <EditorBrowsable(EditorBrowsableState.Always)>
+    Public Property AutoCompleteSource As AutoCompleteSource
+        Get
+            Return cmbList.AutoCompleteSource
+        End Get
+        Set(value As AutoCompleteSource)
+            cmbList.AutoCompleteSource = value
+        End Set
+    End Property
+    <Category("Projekt - Data")>
+    <Browsable(True)> <DesignerSerializationVisibility(DesignerSerializationVisibility.Content)> <Editor("System.Windows.Forms.Design.ListControlStringCollectionEditor, System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a", GetType(UITypeEditor))> <EditorBrowsable(EditorBrowsableState.Always)> <Localizable(True)>
+    Public Property AutoCompleteCustomSource As AutoCompleteStringCollection
+        Get
+            Return cmbList.AutoCompleteCustomSource
+        End Get
+        Set(value As AutoCompleteStringCollection)
+            cmbList.AutoCompleteCustomSource = value
+        End Set
+    End Property
+    <Category("Projekt - Data")>
+    <Browsable(True)> <DefaultValue(AutoCompleteMode.None)> <EditorBrowsable(EditorBrowsableState.Always)>
+    Public Property AutoCompleteMode As AutoCompleteMode
+        Get
+            Return cmbList.AutoCompleteMode
+        End Get
+        Set(value As AutoCompleteMode)
+            cmbList.AutoCompleteMode = value
+        End Set
+    End Property
+    <Category("Projekt - Data")>
+    <Bindable(True)> <Browsable(False)> <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
+    Public Property SelectedItem As Object
+        Get
+            Return cmbList.SelectedItem
+        End Get
+        Set(value As Object)
+            cmbList.SelectedIndex = value
+        End Set
+    End Property
+    <Category("Projekt - Data")>
+    <Browsable(False)> <DesignerSerializationVisibility(DesignerSerializationVisibility.Hidden)>
+    Public Property SelectedIndex As Integer
+        Get
+            Return cmbList.SelectedIndex
+        End Get
+        Set(value As Integer)
+            cmbList.SelectedIndex = value
+        End Set
+    End Property
 
     'Events
     Public Event OnSelectedIndexChanged As EventHandler
@@ -157,13 +222,16 @@ Public Class ProjektComboBox
         AddHandler btnIcon.Paint, New PaintEventHandler(AddressOf Icon_Paint) 'Draw icon
 
         'Label: Text
-        lblText.Dock = Dock.Fill
+        lblText.Dock = DockStyle.Fill
         lblText.AutoSize = False
         lblText.BackColor = _backColor
         lblText.TextAlign = ContentAlignment.MiddleLeft
         lblText.Padding = New Padding(8, 0, 0, 0)
         lblText.Font = New Font(Me.Font.Name, 10.0F)
+        '->Attach label events to user control event
         AddHandler lblText.Click, New EventHandler(AddressOf Surface_Click) 'Selecting combobox
+        AddHandler lblText.MouseEnter, New EventHandler(AddressOf Surface_MouseEnter)
+        AddHandler lblText.MouseLeave, New EventHandler(AddressOf Surface_MouseLeave)
 
         'User Control
         Me.Controls.Add(lblText)
@@ -189,10 +257,12 @@ Public Class ProjektComboBox
 
     End Sub
 
+
 #Region "Events"
     'Default event
     Private Sub ComboBox_SelectedIndexChanged(sender As Object, e As EventArgs)
         RaiseEvent OnSelectedIndexChanged(sender, e)
+
 
         'Refresh text
         lblText.Text = cmbList.Text
@@ -205,6 +275,19 @@ Public Class ProjektComboBox
             cmbList.DroppedDown = True 'Open dropdown
         End If
 
+    End Sub
+
+    Private Sub Surface_MouseLeave(sender As Object, e As EventArgs)
+        Me.OnMouseLeave(e)
+    End Sub
+
+    Private Sub Surface_MouseEnter(sender As Object, e As EventArgs)
+        Me.OnMouseEnter(e)
+    End Sub
+
+    Protected Overrides Sub OnResize(e As EventArgs)
+        MyBase.OnResize(e)
+        AdjustComboBoxDimensions()
     End Sub
 
     Private Sub Icon_Paint(sender As Object, e As PaintEventArgs)
