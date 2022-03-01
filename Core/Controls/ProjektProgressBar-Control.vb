@@ -21,7 +21,7 @@ Public Class ProjektProgressBar
 
     'Other
     Private _paintedBack As Boolean = False
-    Private _stopPainting As Boolean = False
+    Private ReadOnly _stopPainting As Boolean = False
 
     Private Sub New()
         Me.SetStyle(ControlStyles.UserPaint, True)
