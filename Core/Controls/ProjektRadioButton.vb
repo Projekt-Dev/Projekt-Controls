@@ -58,7 +58,7 @@ Public Class ProjektRadioButton
 
         'Drawing
         Using penBorder As New Pen(_checkedColor, 1.6F)
-            Using brushRbCheck As New SolidBrush(CheckedColor)
+            Using brushRbCheck As New SolidBrush(_checkedColor)
                 Using brushText As New SolidBrush(Me.ForeColor)
                     'Draw Surface
                     g.Clear(Me.BackColor)

@@ -85,6 +85,9 @@
     <Compile Include="Core\Controls\ProjektDatePicker-Control.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Core\Controls\ProjektProgressBar-Control.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Core\Controls\ProjektRadioButton.vb">
       <SubType>Component</SubType>
     </Compile>
@@ -128,6 +131,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Core\Controls\ProjektComboBox-Control.resx">
+      <DependentUpon>ProjektComboBox-Control.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core\Controls\ProjektTextBox-Controls.resx">
       <DependentUpon>ProjektTextBox-Controls.vb</DependentUpon>
     </EmbeddedResource>
