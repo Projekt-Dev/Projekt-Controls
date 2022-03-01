@@ -18,10 +18,13 @@ Public Class ProjektProgressBar
     Private _channelHeight As Integer = 6
     Private _sliderHeight As Integer = 6
     Private _showValue As TextPosition = TextPosition.Right
+    Private _symbolBefore As String = ""
+    Private _symbolAfter As String = ""
+    Private _showMaximum As Boolean = False
 
     'Other
     Private _paintedBack As Boolean = False
-    Private ReadOnly _stopPainting As Boolean = False
+    Private _stopPainting As Boolean = False
 
     Private Sub New()
         Me.SetStyle(ControlStyles.UserPaint, True)
@@ -107,6 +110,36 @@ Public Class ProjektProgressBar
             _sliderHeight = value
         End Set
     End Property
+    <Category("Projekt")>
+    Public Property SymbolBefore As String
+        Get
+            Return _symbolBefore
+        End Get
+        Set(value As String)
+            _symbolBefore = value
+            Me.Invalidate()
+        End Set
+    End Property
+    <Category("Projekt")>
+    Public Property SymbolAfter As String
+        Get
+            Return _symbolAfter
+        End Get
+        Set(value As String)
+            _symbolAfter = value
+            Me.Invalidate()
+        End Set
+    End Property
+    <Category("Projekt")>
+    Public Property ShowMaximum As Boolean
+        Get
+            Return _showMaximum
+        End Get
+        Set(value As Boolean)
+            _showMaximum = value
+            Me.Invalidate()
+        End Set
+    End Property
 
     'Paint background and channel
     Protected Overrides Sub OnPaintBackground(pevent As PaintEventArgs)
@@ -158,13 +191,22 @@ Public Class ProjektProgressBar
                     DrawTextValue(g, sliderWidth, rectSlider)
                 End If
             End Using
-
         End If
+
+        If Me.Value = Me.Maximum Then
+            _stopPainting = True
+        Else
+            _stopPainting = False
+        End If
+
     End Sub
 
     Private Sub DrawTextValue(g As Graphics, sliderWidth As Integer, rectSlider As Rectangle)
         'Fields
-        Dim text As String = Me.Value.ToString() + "%"
+        Dim text As String = SymbolBefore + Me.Value.ToString() + SymbolAfter
+        If ShowMaximum = True Then
+            text = text + "/" + SymbolBefore + Me.Maximum.ToString() + SymbolAfter
+        End If
         Dim textSize = TextRenderer.MeasureText(text, Me.Font)
         Dim rectText = New Rectangle(0, 0, textSize.Width, textSize.Height + 2)
         Using brushText As New SolidBrush(Me.ForeColor)
@@ -187,7 +229,7 @@ Public Class ProjektProgressBar
                             Using brushClear As New SolidBrush(Me.Parent.BackColor)
                                 Dim rect = rectSlider
                                 rect.Y = rectText.Y
-                                rect.Height = rect.Height
+                                rect.Height = rectText.Height
                                 g.FillRectangle(brushClear, rect)
                             End Using
                     End Select
@@ -195,10 +237,8 @@ Public Class ProjektProgressBar
                     'Painting
                     g.FillRectangle(brushTextBack, rectText)
                     g.DrawString(text, Me.Font, brushText, rectText, textFormat)
-
                 End Using
             End Using
         End Using
-
     End Sub
 End Class
