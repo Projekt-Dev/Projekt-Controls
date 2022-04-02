@@ -10,7 +10,7 @@ Public Class ProjektRadioButton
     Private _checkedColor As Color = Color.Crimson
     Private _uncheckedColor As Color = Color.Gray
 
-    <Category("Projekt")>
+    <Category("Zero")>
     Public Property CheckedColor As Color
         Get
             Return _checkedColor
@@ -20,7 +20,7 @@ Public Class ProjektRadioButton
             Me.Invalidate()
         End Set
     End Property
-    <Category("Projekt")>
+    <Category("Zero")>
     Public Property UncheckedColor As Color
         Get
             Return _uncheckedColor

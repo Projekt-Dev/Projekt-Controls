@@ -11,9 +11,10 @@
     <AssemblyName>Projekt-Controls</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -76,28 +77,28 @@
     <Compile Include="Core\Components\ProjektRoundedForm-Component.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektButton-Control.vb">
+    <Compile Include="Core\Controls\ProjektButton.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektComboBox-Control.vb">
+    <Compile Include="Core\Controls\ProjektCircularPictureBox.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\Controls\ProjektComboBox.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektDatePicker-Control.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Core\Controls\ProjektProgressBar-Control.vb">
+    <Compile Include="Core\Controls\ProjektDatePicker.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Core\Controls\ProjektRadioButton.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektTextBox-Controls.Designer.vb">
-      <DependentUpon>ProjektTextBox-Controls.vb</DependentUpon>
+    <Compile Include="Core\Controls\ProjektTextBox.Designer.vb">
+      <DependentUpon>ProjektTextBox.vb</DependentUpon>
     </Compile>
-    <Compile Include="Core\Controls\ProjektTextBox-Controls.vb">
+    <Compile Include="Core\Controls\ProjektTextBox.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektToggleButton-Control.vb">
+    <Compile Include="Core\Controls\ProjektToggleButton.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Form1.vb">
@@ -126,16 +127,16 @@
     <Compile Include="Core\Components\ProjektDrag-Component.vb">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Core\Controls\ProjektSeparator-Control.vb">
+    <Compile Include="Core\Controls\ProjektSeparator.vb">
       <SubType>Component</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Core\Controls\ProjektComboBox-Control.resx">
-      <DependentUpon>ProjektComboBox-Control.vb</DependentUpon>
+    <EmbeddedResource Include="Core\Controls\ProjektComboBox.resx">
+      <DependentUpon>ProjektComboBox.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Core\Controls\ProjektTextBox-Controls.resx">
-      <DependentUpon>ProjektTextBox-Controls.vb</DependentUpon>
+    <EmbeddedResource Include="Core\Controls\ProjektTextBox.resx">
+      <DependentUpon>ProjektTextBox.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
@@ -146,8 +147,8 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Core\Controls\ProjektButton-Control.resx">
-      <DependentUpon>ProjektButton-Control.vb</DependentUpon>
+    <EmbeddedResource Include="Core\Controls\ProjektButton.resx">
+      <DependentUpon>ProjektButton.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

@@ -22,9 +22,11 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.ProjektComboBox1 = New Projekt_Controls.ProjektComboBox()
         Me.ProjektSeparator6 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektTextBox3 = New Projekt_Controls.ProjektTextBox()
         Me.ProjektTextBox2 = New Projekt_Controls.ProjektTextBox()
@@ -34,15 +36,13 @@ Partial Class MainForm
         Me.ProjektSeparator3 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektSeparator2 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektSeparator1 = New Projekt_Controls.ProjektSeparator()
-        Me.ProjektToggleButton1 = New Projekt_Controls.ProjektToggleButton()
         Me.ProjektDatePicker1 = New Projekt_Controls.ProjektDatePicker()
         Me.ProjektButton1 = New Projekt_Controls.ProjektButton()
-        Me.ProjektRadioButton2 = New Projekt_Controls.ProjektRadioButton()
-        Me.ProjektRadioButton1 = New Projekt_Controls.ProjektRadioButton()
         Me.DragMain = New Projekt_Controls.ProjektDrag_Component()
         Me.MainRound = New Projekt_Controls.ProjektRoundedForm_Component()
-        Me.ProjektComboBox1 = New Projekt_Controls.ProjektComboBox()
+        Me.ProjektCircularPictureBox1 = New Projekt_Controls.ProjektCircularPictureBox()
         Me.pnlHeader.SuspendLayout()
+        CType(Me.ProjektCircularPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'pnlHeader
@@ -63,7 +63,7 @@ Partial Class MainForm
         Me.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.White
         Me.btnExit.FlatAppearance.BorderSize = 2
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Montserrat SemiBold", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnExit.ForeColor = System.Drawing.Color.White
         Me.btnExit.Location = New System.Drawing.Point(1205, 0)
         Me.btnExit.Name = "btnExit"
@@ -76,13 +76,32 @@ Partial Class MainForm
         '
         Me.lblTitle.AutoSize = True
         Me.lblTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.lblTitle.Font = New System.Drawing.Font("Montserrat Medium", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTitle.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblTitle.ForeColor = System.Drawing.Color.White
         Me.lblTitle.Location = New System.Drawing.Point(464, 9)
         Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(362, 29)
+        Me.lblTitle.Size = New System.Drawing.Size(351, 25)
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "PROJEKT CUSTOM CONTROLS"
+        '
+        'ProjektComboBox1
+        '
+        Me.ProjektComboBox1._Text = ""
+        Me.ProjektComboBox1.BackColor = System.Drawing.Color.Crimson
+        Me.ProjektComboBox1.BorderColor = System.Drawing.Color.White
+        Me.ProjektComboBox1.BorderSize = 1
+        Me.ProjektComboBox1.DataSource = Nothing
+        Me.ProjektComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
+        Me.ProjektComboBox1.ForeColor = System.Drawing.Color.DimGray
+        Me.ProjektComboBox1.IconColor = System.Drawing.Color.White
+        Me.ProjektComboBox1.ListBackColor = System.Drawing.Color.Crimson
+        Me.ProjektComboBox1.ListTextColor = System.Drawing.Color.White
+        Me.ProjektComboBox1.Location = New System.Drawing.Point(12, 586)
+        Me.ProjektComboBox1.MinimumSize = New System.Drawing.Size(200, 30)
+        Me.ProjektComboBox1.Name = "ProjektComboBox1"
+        Me.ProjektComboBox1.Padding = New System.Windows.Forms.Padding(1)
+        Me.ProjektComboBox1.Size = New System.Drawing.Size(200, 30)
+        Me.ProjektComboBox1.TabIndex = 16
         '
         'ProjektSeparator6
         '
@@ -219,23 +238,6 @@ Partial Class MainForm
         Me.ProjektSeparator1.Text = "ProjektSeparator1"
         Me.ProjektSeparator1.Thickness = 1
         '
-        'ProjektToggleButton1
-        '
-        Me.ProjektToggleButton1.AutoSize = True
-        Me.ProjektToggleButton1.Checked = True
-        Me.ProjektToggleButton1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ProjektToggleButton1.Location = New System.Drawing.Point(12, 309)
-        Me.ProjektToggleButton1.MinimumSize = New System.Drawing.Size(45, 22)
-        Me.ProjektToggleButton1.Name = "ProjektToggleButton1"
-        Me.ProjektToggleButton1.OffBackColor = System.Drawing.Color.Gray
-        Me.ProjektToggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro
-        Me.ProjektToggleButton1.OnBackColor = System.Drawing.Color.Crimson
-        Me.ProjektToggleButton1.OnToggleColor = System.Drawing.Color.Crimson
-        Me.ProjektToggleButton1.Size = New System.Drawing.Size(45, 22)
-        Me.ProjektToggleButton1.SolidStyle = False
-        Me.ProjektToggleButton1.TabIndex = 5
-        Me.ProjektToggleButton1.UseVisualStyleBackColor = True
-        '
         'ProjektDatePicker1
         '
         Me.ProjektDatePicker1.BorderColor = System.Drawing.Color.PaleVioletRed
@@ -267,34 +269,6 @@ Partial Class MainForm
         Me.ProjektButton1.TextColor = System.Drawing.Color.White
         Me.ProjektButton1.UseVisualStyleBackColor = False
         '
-        'ProjektRadioButton2
-        '
-        Me.ProjektRadioButton2.AutoSize = True
-        Me.ProjektRadioButton2.CheckedColor = System.Drawing.Color.Crimson
-        Me.ProjektRadioButton2.Location = New System.Drawing.Point(12, 108)
-        Me.ProjektRadioButton2.MinimumSize = New System.Drawing.Size(0, 21)
-        Me.ProjektRadioButton2.Name = "ProjektRadioButton2"
-        Me.ProjektRadioButton2.Size = New System.Drawing.Size(135, 21)
-        Me.ProjektRadioButton2.TabIndex = 2
-        Me.ProjektRadioButton2.TabStop = True
-        Me.ProjektRadioButton2.Text = "ProjektRadioButton2"
-        Me.ProjektRadioButton2.UncheckedColor = System.Drawing.Color.Gray
-        Me.ProjektRadioButton2.UseVisualStyleBackColor = True
-        '
-        'ProjektRadioButton1
-        '
-        Me.ProjektRadioButton1.AutoSize = True
-        Me.ProjektRadioButton1.CheckedColor = System.Drawing.Color.Crimson
-        Me.ProjektRadioButton1.Location = New System.Drawing.Point(12, 52)
-        Me.ProjektRadioButton1.MinimumSize = New System.Drawing.Size(0, 21)
-        Me.ProjektRadioButton1.Name = "ProjektRadioButton1"
-        Me.ProjektRadioButton1.Size = New System.Drawing.Size(135, 21)
-        Me.ProjektRadioButton1.TabIndex = 1
-        Me.ProjektRadioButton1.TabStop = True
-        Me.ProjektRadioButton1.Text = "ProjektRadioButton1"
-        Me.ProjektRadioButton1.UncheckedColor = System.Drawing.Color.Gray
-        Me.ProjektRadioButton1.UseVisualStyleBackColor = True
-        '
         'DragMain
         '
         Me.DragMain.SelectedControl = Me.pnlHeader
@@ -304,24 +278,23 @@ Partial Class MainForm
         Me.MainRound.BorderSize = 20
         Me.MainRound.SelectedForm = Nothing
         '
-        'ProjektComboBox1
+        'ProjektCircularPictureBox1
         '
-        Me.ProjektComboBox1._Text = ""
-        Me.ProjektComboBox1.BackColor = System.Drawing.Color.Crimson
-        Me.ProjektComboBox1.BorderColor = System.Drawing.Color.White
-        Me.ProjektComboBox1.BorderSize = 1
-        Me.ProjektComboBox1.DataSource = Nothing
-        Me.ProjektComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDown
-        Me.ProjektComboBox1.ForeColor = System.Drawing.Color.DimGray
-        Me.ProjektComboBox1.IconColor = System.Drawing.Color.White
-        Me.ProjektComboBox1.ListBackColor = System.Drawing.Color.Crimson
-        Me.ProjektComboBox1.ListTextColor = System.Drawing.Color.White
-        Me.ProjektComboBox1.Location = New System.Drawing.Point(12, 586)
-        Me.ProjektComboBox1.MinimumSize = New System.Drawing.Size(200, 30)
-        Me.ProjektComboBox1.Name = "ProjektComboBox1"
-        Me.ProjektComboBox1.Padding = New System.Windows.Forms.Padding(1)
-        Me.ProjektComboBox1.Size = New System.Drawing.Size(200, 30)
-        Me.ProjektComboBox1.TabIndex = 16
+        Me.ProjektCircularPictureBox1.BackgroundImage = CType(resources.GetObject("ProjektCircularPictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.ProjektCircularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ProjektCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat
+        Me.ProjektCircularPictureBox1.BorderColor = System.Drawing.Color.Crimson
+        Me.ProjektCircularPictureBox1.BorderColor2 = System.Drawing.Color.DarkRed
+        Me.ProjektCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid
+        Me.ProjektCircularPictureBox1.BorderSize = 5
+        Me.ProjektCircularPictureBox1.GradientAngle = 50.0R
+        Me.ProjektCircularPictureBox1.Image = CType(resources.GetObject("ProjektCircularPictureBox1.Image"), System.Drawing.Image)
+        Me.ProjektCircularPictureBox1.Location = New System.Drawing.Point(338, 52)
+        Me.ProjektCircularPictureBox1.Name = "ProjektCircularPictureBox1"
+        Me.ProjektCircularPictureBox1.Size = New System.Drawing.Size(239, 239)
+        Me.ProjektCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ProjektCircularPictureBox1.TabIndex = 17
+        Me.ProjektCircularPictureBox1.TabStop = False
         '
         'MainForm
         '
@@ -329,6 +302,7 @@ Partial Class MainForm
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.Window
         Me.ClientSize = New System.Drawing.Size(1280, 720)
+        Me.Controls.Add(Me.ProjektCircularPictureBox1)
         Me.Controls.Add(Me.ProjektComboBox1)
         Me.Controls.Add(Me.ProjektSeparator6)
         Me.Controls.Add(Me.ProjektTextBox3)
@@ -339,11 +313,8 @@ Partial Class MainForm
         Me.Controls.Add(Me.ProjektSeparator3)
         Me.Controls.Add(Me.ProjektSeparator2)
         Me.Controls.Add(Me.ProjektSeparator1)
-        Me.Controls.Add(Me.ProjektToggleButton1)
         Me.Controls.Add(Me.ProjektDatePicker1)
         Me.Controls.Add(Me.ProjektButton1)
-        Me.Controls.Add(Me.ProjektRadioButton2)
-        Me.Controls.Add(Me.ProjektRadioButton1)
         Me.Controls.Add(Me.pnlHeader)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MaximizeBox = False
@@ -353,8 +324,8 @@ Partial Class MainForm
         Me.Text = "Form1"
         Me.pnlHeader.ResumeLayout(False)
         Me.pnlHeader.PerformLayout()
+        CType(Me.ProjektCircularPictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
 
@@ -378,4 +349,5 @@ Partial Class MainForm
     Friend WithEvents ProjektTextBox3 As ProjektTextBox
     Friend WithEvents ProjektSeparator6 As ProjektSeparator
     Friend WithEvents ProjektComboBox1 As ProjektComboBox
+    Friend WithEvents ProjektCircularPictureBox1 As ProjektCircularPictureBox
 End Class
