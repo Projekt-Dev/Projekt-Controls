@@ -26,6 +26,7 @@ Partial Class MainForm
         Me.pnlHeader = New System.Windows.Forms.Panel()
         Me.btnExit = New System.Windows.Forms.Button()
         Me.lblTitle = New System.Windows.Forms.Label()
+        Me.ProjektCircularPictureBox1 = New Projekt_Controls.ProjektCircularPictureBox()
         Me.ProjektComboBox1 = New Projekt_Controls.ProjektComboBox()
         Me.ProjektSeparator6 = New Projekt_Controls.ProjektSeparator()
         Me.ProjektTextBox3 = New Projekt_Controls.ProjektTextBox()
@@ -40,7 +41,6 @@ Partial Class MainForm
         Me.ProjektButton1 = New Projekt_Controls.ProjektButton()
         Me.DragMain = New Projekt_Controls.ProjektDrag_Component()
         Me.MainRound = New Projekt_Controls.ProjektRoundedForm_Component()
-        Me.ProjektCircularPictureBox1 = New Projekt_Controls.ProjektCircularPictureBox()
         Me.pnlHeader.SuspendLayout()
         CType(Me.ProjektCircularPictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -83,6 +83,25 @@ Partial Class MainForm
         Me.lblTitle.Size = New System.Drawing.Size(351, 25)
         Me.lblTitle.TabIndex = 0
         Me.lblTitle.Text = "PROJEKT CUSTOM CONTROLS"
+        '
+        'ProjektCircularPictureBox1
+        '
+        Me.ProjektCircularPictureBox1.BackColor = System.Drawing.Color.Transparent
+        Me.ProjektCircularPictureBox1.BackgroundImage = CType(resources.GetObject("ProjektCircularPictureBox1.BackgroundImage"), System.Drawing.Image)
+        Me.ProjektCircularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ProjektCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat
+        Me.ProjektCircularPictureBox1.BorderColor = System.Drawing.Color.Crimson
+        Me.ProjektCircularPictureBox1.BorderColor2 = System.Drawing.Color.DarkRed
+        Me.ProjektCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid
+        Me.ProjektCircularPictureBox1.BorderSize = 5
+        Me.ProjektCircularPictureBox1.GradientAngle = 50.0R
+        Me.ProjektCircularPictureBox1.Image = CType(resources.GetObject("ProjektCircularPictureBox1.Image"), System.Drawing.Image)
+        Me.ProjektCircularPictureBox1.Location = New System.Drawing.Point(338, 52)
+        Me.ProjektCircularPictureBox1.Name = "ProjektCircularPictureBox1"
+        Me.ProjektCircularPictureBox1.Size = New System.Drawing.Size(239, 239)
+        Me.ProjektCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.ProjektCircularPictureBox1.TabIndex = 17
+        Me.ProjektCircularPictureBox1.TabStop = False
         '
         'ProjektComboBox1
         '
@@ -277,24 +296,6 @@ Partial Class MainForm
         '
         Me.MainRound.BorderSize = 20
         Me.MainRound.SelectedForm = Nothing
-        '
-        'ProjektCircularPictureBox1
-        '
-        Me.ProjektCircularPictureBox1.BackgroundImage = CType(resources.GetObject("ProjektCircularPictureBox1.BackgroundImage"), System.Drawing.Image)
-        Me.ProjektCircularPictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ProjektCircularPictureBox1.BorderCapStyle = System.Drawing.Drawing2D.DashCap.Flat
-        Me.ProjektCircularPictureBox1.BorderColor = System.Drawing.Color.Crimson
-        Me.ProjektCircularPictureBox1.BorderColor2 = System.Drawing.Color.DarkRed
-        Me.ProjektCircularPictureBox1.BorderLineStyle = System.Drawing.Drawing2D.DashStyle.Solid
-        Me.ProjektCircularPictureBox1.BorderSize = 5
-        Me.ProjektCircularPictureBox1.GradientAngle = 50.0R
-        Me.ProjektCircularPictureBox1.Image = CType(resources.GetObject("ProjektCircularPictureBox1.Image"), System.Drawing.Image)
-        Me.ProjektCircularPictureBox1.Location = New System.Drawing.Point(338, 52)
-        Me.ProjektCircularPictureBox1.Name = "ProjektCircularPictureBox1"
-        Me.ProjektCircularPictureBox1.Size = New System.Drawing.Size(239, 239)
-        Me.ProjektCircularPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
-        Me.ProjektCircularPictureBox1.TabIndex = 17
-        Me.ProjektCircularPictureBox1.TabStop = False
         '
         'MainForm
         '
