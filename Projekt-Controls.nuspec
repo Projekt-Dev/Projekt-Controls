@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>ProjektCode.ProjektControls</id>
+    <version>1.0.0</version>
+    <title>Projekt Controls</title>
+    <authors>ProjektCode</authors>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <!-- <icon>icon.png</icon> -->
+    <projectUrl>https://github.com/ProjektCode/Projekt-Controls</projectUrl>
+    <description>A collection of custom controls.</description>
+    <releaseNotes>First Release of Custom Controls.</releaseNotes>
+    <copyright>Copyright ©  2022</copyright>
+    <tags>C# VB.NET WinForms CustomControls .NET </tags>
+  </metadata>
+</package>

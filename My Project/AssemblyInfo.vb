@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("Projekt-Controls")>
-<Assembly: AssemblyDescription("")>
-<Assembly: AssemblyCompany("")>
-<Assembly: AssemblyProduct("Projekt-Controls")>
-<Assembly: AssemblyCopyright("Copyright ©  2021")>
+<Assembly: AssemblyTitle("Projekt Controls")>
+<Assembly: AssemblyDescription("A collection of custom controls.")>
+<Assembly: AssemblyCompany("ProjektCode")>
+<Assembly: AssemblyProduct("")>
+<Assembly: AssemblyCopyright("Copyright ©  2022")>
 <Assembly: AssemblyTrademark("")>
 
 <Assembly: ComVisible(False)>
